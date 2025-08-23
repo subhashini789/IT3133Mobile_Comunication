@@ -1,1 +1,89 @@
+01.Swap 2 numbers without temporary varriable.
+02.find three large numbers among give arrsy of numbers 
+03.break a whole number into digitals like 4562 -> 4,5,6,2
+04.scale a matrix
+05.multifly two numbers 
+06.create a functions to print a elements from multi demensial array
+
+01.
+let a = 5 , b = 10;
+[a, b] = [b, a];
+console.log("a="a, "b="b);
+
+let a = 5 , b = 10;
+a = a + b;
+b = a - b;
+a = a - b;
+console.log("a="a, "b="b);
+..................................................................................................................................................................................................................
+02.
+let array = [4,5,6,9];
+array.sort((a, b) => b - a);
+let largestThree = array.slice(0, 3);
+console.log("largestThree = ",largestThree);
+..................................................................................................................................................................................................................
+03.
+//
+let number = 4562;
+let digits = num.toString().split("").map(Number);
+console.log(digits);
+
+//
+let num = 4562;
+let digits = [];
+
+while(num > 0){
+	digits.unshift(num % 10);
+	num = Math.floor(num / 10);
+}
+
+console.log(digits);
+
+//
+let num = 4562;
+let digits = [..num.toString()].map(Number);
+console.log(digits);
+................................................................................................................................................................................................................
+04.
+let matrix = [
+[1,2],
+[3,4]
+];
+let k = 3;
+
+let scaleMatrix = [];
+
+for(let i = 0; i < matrix.length; i++){
+	scaleMatrix[i] = [];
+	for(let j = 0; j < matrix[i].length;j++){
+		scaleMatrix[i][j] = matrix[i][j]*k;
+	}	
+}
+console.log(scaleMatrix);
+................................................................................................................................................................................................................
+05.
+let a = 5;
+let b = 8;
+let multiNumbers = a * b;
+console.log(multiNumbers);
+.................................................................................................................................................................................................................
+06.
+function print2DArray(arr){
+ for(let i = 0; i < arr.length; i++){
+	 for(let j = 0; j < arr.legth; j++){
+		 console.log(arr[i][j]);
+	 }
+ }
+}
+
+let matrix = [
+[1,2],
+[3,4]
+];
+
+print2DArray(matrix);
+
+
+
+
 
